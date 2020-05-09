@@ -50,7 +50,7 @@ def cancelamento(since_id):
     return novo_since_id
 
 def main():
-    since_id = 1259213130816720896
+    since_id = 1259214359022063616
     while True:
         print('searching')
         since_id = cancelamento(since_id)
