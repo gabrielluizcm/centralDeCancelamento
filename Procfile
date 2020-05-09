@@ -1,0 +1,1 @@
+workey: python kawasaki.py
