@@ -36,8 +36,7 @@ def cancelamento(since_id):
                     mensagem += motivo
                     motivo = motivo.replace(' por ', '')
                     escrita = ImageDraw.Draw(manipula)
-                    fonte = ImageFont.truetype('Arial.ttf', size=30)
-                    escrita.text((20,370), 'Motivo: '+motivo, fill=(255,0,0), font = fonte)
+                    escrita.text((20,370), 'Motivo: '+motivo, fill=(255,0,0))
                 manipula.save('upload.png')
                 manipula.show()
                 media = api.media_upload('upload.png').media_id_string
