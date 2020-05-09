@@ -19,7 +19,7 @@ pycrypto==2.6.1
 pygobject==3.36.1
 pylint==1.9.5
 PySocks==1.7.1
-python-apt==1.6.5+ubuntu0.2
+python-apt==0.7.8
 pyxdg==0.25
 requests==2.23.0
 requests-oauthlib==1.3.0
