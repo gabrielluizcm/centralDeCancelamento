@@ -1,1 +1,1 @@
-workey: python kawasaki.py
+worker: python kawasaki.py
