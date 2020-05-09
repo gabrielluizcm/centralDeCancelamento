@@ -23,7 +23,7 @@ def cancelamento(since_id):
                 tweetDoCancelado = api.get_status(tweet.in_reply_to_status_id)
                 nomeDoCancelado = tweetDoCancelado.user.name
                 url = tweetDoCancelado.user.profile_image_url.replace('normal', '400x400')
-                fullpath = 'temp/'+str(since_id)+'.jpg'
+                fullpath = str(since_id)+'.jpg'
                 urllib.request.urlretrieve(url, fullpath)
                 cancelado = Image.open('cancelado.png')
                 cancelado = cancelado.resize((400,400))
@@ -38,12 +38,12 @@ def cancelamento(since_id):
                     escrita = ImageDraw.Draw(manipula)
                     fonte = ImageFont.truetype('Arial.ttf', size=30)
                     escrita.text((20,370), 'Motivo: '+motivo, fill=(255,0,0), font = fonte)
-                manipula.save('temp/upload.png')
+                manipula.save('upload.png')
                 manipula.show()
-                media = api.media_upload('temp/upload.png').media_id_string
+                media = api.media_upload('upload.png').media_id_string
                 media = str(media)
                 api.update_status(mensagem, in_reply_to_status_id = tweet.id, auto_populate_reply_metadata=True, media_ids = [media])
-                os.remove('temp/upload.png')
+                os.remove('upload.png')
                 os.remove(fullpath)
                 print('replied to '+nomeDoCancelado)
 
