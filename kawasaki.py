@@ -34,13 +34,10 @@ def cancelamento(since_id):
                 if ('por' in tweet.text.lower()):
                     motivo = tweet.text.lower().replace('@naooanjo cancela aqui', '')
                     arroba = tweetDoCancelado.user.screen_name.lower()
-                    print(arroba)
-                    print('@'+arroba)
-                    motivo = motivo.replace('@'+arroba, 'canceladx')
+                    motivo = motivo.replace('@'+arroba, '')
                     mensagem += motivo
                     print(mensagem)
-                    break
-                    motivo = motivo.replace(' por ', '')
+                    motivo = motivo.replace(' por ', 'por')
                     escrita = ImageDraw.Draw(manipula)
                     escrita.text((20,370), 'Motivo: '+motivo, fill=(255,0,0))
                 manipula.save('upload.png')
