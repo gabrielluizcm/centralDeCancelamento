@@ -35,7 +35,8 @@ def cancelamento(since_id):
                     motivo = tweet.text.lower().replace('@naooanjo cancela aqui', '')
                     arroba = tweetDoCancelado.user.screen_name.lower()
                     print(arroba)
-                    mensagem = mensagem.replace('canceladx@'+arroba, 'canceladx')
+                    print('canceladx+arroba')
+                    motivo = motivo.replace('canceladx@'+arroba, 'canceladx')
                     mensagem += motivo
                     print(mensagem)
                     break
