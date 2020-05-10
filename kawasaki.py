@@ -37,7 +37,7 @@ def cancelamento(since_id):
                     motivo = motivo.replace('@'+arroba, '')
                     mensagem += motivo
                     print(mensagem)
-                    motivo = motivo.replace(' por ', 'por')
+                    motivo = motivo.replace(' por ', '')
                     escrita = ImageDraw.Draw(manipula)
                     escrita.text((20,370), 'Motivo: '+motivo, fill=(255,0,0))
                 manipula.save('upload.png')
