@@ -39,9 +39,9 @@ def cancelamento(since_id):
                     print(mensagem)
                     motivo = motivo.replace(' por ', '')
                     escrita = ImageDraw.Draw(manipula)
-                    escrita.text((20,370), 'Motivo: '+motivo, fill=(255,0,0))
+                    fonte = ImageFont.truetype('arial.ttf', size=28)
+                    escrita.text((20,370), 'Motivo: '+motivo, fill=(255,0,0), font = fonte)
                 manipula.save('upload.png')
-                manipula.show()
                 media = api.media_upload('upload.png').media_id_string
                 media = str(media)
                 api.update_status(mensagem, in_reply_to_status_id = tweet.id, auto_populate_reply_metadata=True, media_ids = [media])
