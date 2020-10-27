@@ -4,7 +4,7 @@ backports.functools-lru-cache==1.6.1
 certifi==2020.4.5.1
 chardet==3.0.4
 configparser==4.0.2
-cryptography==2.1.4
+cryptography==3.2
 enum34==1.1.10
 futures==3.1.1
 idna==2.9
